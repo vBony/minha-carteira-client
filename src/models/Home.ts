@@ -1,5 +1,4 @@
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 import DocumentMixin from '@/mixins/DocumentMixin'
 import Header from '@/components/Header.vue';
 import $ from 'jquery'
@@ -11,7 +10,6 @@ import Toast from '@/entities/Toast';
 // Importando componentes
 @Options({
   components: {
-    HelloWorld,
     Header
   },
 })
@@ -83,7 +81,7 @@ class Home extends Vue {
                 }
             },
             error: () => {
-                this.$router.push('/login')
+                // this.$router.push('/login')
             },
             dataType: 'json'
         });
@@ -207,6 +205,7 @@ class Home extends Vue {
     }
 
     getTransacoesMesAno(mesano){
+        // eslint-disable-next-line
         const mesanoinput:any = $('#datePicker').val()
         this.mesanos.mes_ano = mesanoinput
 
@@ -240,7 +239,7 @@ class Home extends Vue {
                 }
             },
             error: () => {
-                this.$router.replace('/login')
+                // this.$router.replace('/login')
             },
             dataType: 'json'
         });
@@ -277,7 +276,7 @@ class Home extends Vue {
                 }
             },
             error: () => {
-                this.$router.replace('/login')
+                // this.$router.replace('/login')
             },
             dataType: 'json'
         });
@@ -313,7 +312,7 @@ class Home extends Vue {
                 }
             },
             error: () => {
-                this.$router.replace('/login')
+                // this.$router.replace('/login')
             },
             dataType: 'json'
         })

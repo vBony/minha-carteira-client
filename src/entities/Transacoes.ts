@@ -1,3 +1,4 @@
+/* eslint-disable */
 class Transacoes {
     public tra_id = null
     public tra_tipo = 0
